@@ -1,5 +1,6 @@
 name: test ECR
-on: workflow_dispatch
+on: 
+  workflow_dispatch
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
