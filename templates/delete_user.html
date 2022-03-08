@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="delete_user">
+
+    <div class="card">
+        <img src="./static/Management/images/delete_user.png" class="card_images"><br>
+
+        <!USERNAME>
+        <form action="/delete"method="POST">
+        <label class ="label" for="delete_username" id="label_for_delete_username">Username</label><br>
+        <input type="text" name="delete_username" id="delete_username"><br><br>
+        <!DELETE USER BUTTON>
+        <input class="button" type="submit" name="delete_user" value="Delete User" id="delete_button">
+        </form>
+    </div>
+
+    <div id="little_menu2">
+            
+        <div class="lmenu">
+            <a href="{{ url_for('main_menu') }}"><img src="./static/Management/images/home.png" class="option_image2"></a>
+        </div>
+        
+        <div class="lmenu">
+            <a href="{{ url_for('create_user') }}"><img src="./static/Management/images/new_user.png" class="option_image2" href="create_user"></a>
+        </div>
+
+        <div class="lmenu">
+            <a href="{{ url_for('change_password') }}"><img src="./static/Management/images/change_password .png" class="option_image2"></a>
+        </div>
+
+        <div class="lmenu">
+            <a href="{{ url_for('list_users') }}"><img src="./static/Management/images/users_list2.png" class="option_image2"></a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

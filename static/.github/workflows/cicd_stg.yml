@@ -1,0 +1,22 @@
+name: CD to stg
+on:
+  push:
+    branches: [ stg ]
+jobs:
+  deploy:
+    name: Deploy to stg
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Transfer files using scp
+      uses: appleboy/scp-action@master
+      with: 
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "./"
+        target: "/usr/app/stg"
+
+

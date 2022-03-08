@@ -1,0 +1,108 @@
+@font-face 
+{
+    font-family: 'F1';
+    src: url(./fonts/Formula1.ttf);
+}
+
+html 
+{
+    height: 100%;
+}
+body
+{
+    background-image:linear-gradient(to top,rgba(255, 0, 0, 0.4),28.8%,rgb(0, 0, 0)),url(./Images/logo6.jpg);
+    background-size: cover;    
+}
+
+#logo
+{
+    position: relative;
+    left: 8%;
+}
+.login_block
+{
+    background-color: black;
+    border:solid 2px rgba(143, 131, 131,0.7);
+
+    border-radius: 20px;
+    position: absolute;
+    left: 40.5%;
+    top: 10%;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    padding: 25px 25px;
+}
+
+
+#label_for_username
+{
+    font-family: 'F1';
+    text-align: center;
+    position: relative;
+    left: 14%;
+    color: white;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#username
+{
+    font-family: 'F1';
+    position: relative;
+    width: 290px;
+    text-align: center;
+    font-size: 56 px;
+    border-radius: 10px;
+}
+
+
+#label_for_password
+{
+    font-family: 'F1';
+    position: relative;
+    left: 14%;
+    color: white;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#password
+{
+    font-family: 'F1';
+    position: relative;
+    width: 290px;
+    text-align: center;
+    font-size: 13 px;
+    border-radius: 10px;
+}
+
+
+#login_button
+{
+    position: relative;
+    left: 8.1%;
+    font-family: 'F1';
+    background-color: brown;
+    width:250px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .2s; 
+}
+
+#login_button:hover{
+    background: -webkit-linear-gradient(#000000, #ff2800);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+}
+
+

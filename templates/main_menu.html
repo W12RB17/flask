@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div id="main_section">
+    <div class="animation">
+    <h1 id="begin">MANAGEMENT</h1>
+    </div>
+    <div class="animation">
+    <img src="./static/Management/images/car.png" id="image_animation">
+    </div>
+    <section id="menu">
+        <div id="options">
+            <a href="{{ url_for('create_user') }}"><img src="./static/Management/images/new_user.png" class="option_image" href="create_user"></a>
+        </div>
+
+        <div id="options">
+            <a href="{{ url_for('change_password') }}"><img src="./static/Management/images/change_password .png" class="option_image"></a>
+        </div>
+
+        <div id="options">
+            <a href="{{ url_for('delete_user') }}"><img src="./static/Management/images/delete_user.png " class="option_image"></a>
+        </div>
+
+        <div id="options">
+            <a href="{{ url_for('list_users') }}"><img src="./static/Management/images/users_list2.png" class="option_image"></a>
+        </div>
+    </section>
+    <div id="separator">
+    </div>
+</div>
+
+{% endblock%}
+
