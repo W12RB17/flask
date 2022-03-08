@@ -16,4 +16,3 @@ jobs:
         region: us-east-2
         tags: test,${{ github.sha }}
         create_repo: true
-        dockerfile: Dockerfile
