@@ -1,14 +1,12 @@
 name: test ECR
-on:
-  push:
-    branches: [ master ]
+on: workflow_dispatch
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: ls
-    - run: pwd
+    run: ls
+    run: pwd
     - uses: kciter/aws-ecr-action@master
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
