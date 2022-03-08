@@ -14,6 +14,5 @@ jobs:
         account_id: ${{ secrets.AWS_ACCOUNT_ID }}
         repo: flask
         region: us-east-2
-        tags: test
         create_repo: true
         path: ../
