@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: docker://ghcr.io/kciter/aws-ecr-action:latest
+    - uses: kciter/aws-ecr-action@master
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -15,4 +15,4 @@ jobs:
         repo: public.ecr.aws/s7v1w4i0/flask-franquito
         region: us-east-2
         create_repo: false
-        path: ../Docker
+        path: ./Docker
