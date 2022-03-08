@@ -17,4 +17,4 @@ jobs:
         repo: flask
         region: us-east-2
         create_repo: true
-        path: ./Docker 
+        path: /home/runner/work/flask/flask
