@@ -13,4 +13,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        script: cd /var/www/html/app && ls
+        script: cd /etc/nginx && ls
