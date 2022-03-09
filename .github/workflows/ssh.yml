@@ -1,7 +1,11 @@
 name: remote ssh command
 on: [push]
+inputs:
+  repo: 'URL of ECR repo'
+  required: true    
+  
 jobs:
-
+  name: Build
   build:
     inputs:
       repo: 'URL of ECR repo'
