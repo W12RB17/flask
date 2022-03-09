@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       repo:
-      required: true
+        required: true
 jobs:
 
   build:
