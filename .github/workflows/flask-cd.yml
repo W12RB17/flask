@@ -19,4 +19,4 @@ jobs:
       id: test
     - name: output
       run: |
-        echo '${{ steps.test.outputs.var }}'
+        echo '${{steps.test.outputs}}'
