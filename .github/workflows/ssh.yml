@@ -1,10 +1,8 @@
 name: remote ssh command
 on: [push]
-inputs:
-  repo: 'URL of ECR repo'
-  required: true    
-  
 jobs:
+
+  build:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +11,6 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.KEY }}
-        script: sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin $repo
+        script: sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 067064748087.dkr.ecr.us-east-2.amazonaws.com
