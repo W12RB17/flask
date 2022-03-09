@@ -17,4 +17,6 @@ jobs:
         create_repo: true
         path: /home/runner/work/flask/flask
       id: test
-  run: echo '${{ steps.test.outputs.var }}'
+    - name: output
+      run: |
+        echo '${{ steps.test.outputs.var }}'
