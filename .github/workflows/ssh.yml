@@ -16,4 +16,4 @@ jobs:
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1    
-      #script: sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 067064748087.dkr.ecr.us-east-2.amazonaws.com
+      script: ls
