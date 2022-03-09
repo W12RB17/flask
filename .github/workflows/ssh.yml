@@ -5,11 +5,6 @@ inputs:
   required: true    
   
 jobs:
-  name: Build
-  build:
-    inputs:
-      repo: 'URL of ECR repo'
-      required: true    
     name: Build
     runs-on: ubuntu-latest
     steps:
