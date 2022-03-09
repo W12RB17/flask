@@ -12,8 +12,8 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }} 
+        port: ${{ secrets.PORT }}
+        script: ls
     - name: Login to Amazon ECR
       id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1    
-      script: ls
+      uses: aws-actions/amazon-ecr-login@v1   
