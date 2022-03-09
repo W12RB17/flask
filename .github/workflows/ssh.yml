@@ -4,8 +4,8 @@ jobs:
 
   build:
     inputs:
-        repo: 'URL of ECR repo'
-        required: true    
+      repo: 'URL of ECR repo'
+      required: true    
     name: Build
     runs-on: ubuntu-latest
     steps:
