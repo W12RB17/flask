@@ -1,6 +1,6 @@
 name: remote ssh command
 on:
-  workflow_dispatch:
+  push:
     inputs:
       repo:
         required: true 
