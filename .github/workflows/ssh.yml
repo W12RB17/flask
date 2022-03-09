@@ -16,4 +16,4 @@ jobs:
         script: |
           sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 067064748087.dkr.ecr.us-east-2.amazonaws.com
           sudo docker pull 067064748087.dkr.ecr.us-east-2.amazonaws.com/flask:latest
-          sudo docker run --name flask -it -p 5000:5000 067064748087.dkr.ecr.us-east-2.amazonaws.com/flask:latest
+          sudo docker run --name flask -p 5000:5000 067064748087.dkr.ecr.us-east-2.amazonaws.com/flask:latest
