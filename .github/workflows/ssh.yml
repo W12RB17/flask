@@ -1,5 +1,9 @@
 name: remote ssh command
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+      required: true
 jobs:
 
   build:
