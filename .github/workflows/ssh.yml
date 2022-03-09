@@ -5,6 +5,10 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    inputs:
+      environment:
+        repo: 'URL of ECR repo'
+        required: true
     steps:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
@@ -13,4 +17,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        script: cd /etc/nginx && ls
+        script: sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin $repo
