@@ -5,7 +5,7 @@ ENV AWS_UN='admin'
 ENV AWS_PASSWORD='F14.tomcat!!'
 ENV AWS_DBNAME='php_app'
 COPY ./ /flask
-EXPOSE 5000 3306
+EXPOSE 5000
 ENV FLASK_ENV=development
 RUN apt update &&\
     apt install python3 -y &&\
