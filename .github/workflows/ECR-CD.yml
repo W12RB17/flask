@@ -34,7 +34,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        port: ${{ secrets.PORT }} 
         script: |
           sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin ${{steps.login-ecr.outputs.registry}}/flask:${{ github.sha}}
           sudo docker pull ${{steps.login-ecr.outputs.registry}}/flask:${{ github.sha}}
