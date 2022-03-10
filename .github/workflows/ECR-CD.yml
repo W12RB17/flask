@@ -20,12 +20,23 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
     
-    - name: test output
+    - name: Build and Push Image
       env:
         registry: ${{steps.login-ecr.outputs.registry}}
         repository: flask
         tag: ${{ github.sha}}
       run: |
         docker build -t $registry/$repository:$tag .
-        docker images
+        docker push $registry/$repository:$tag
+    - name: SSH into server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin $registry
+          sudo docker pull $registry/$repository:$tag
+          sudo docker run --name flask -d -p $registry/$repository:$tag
 
