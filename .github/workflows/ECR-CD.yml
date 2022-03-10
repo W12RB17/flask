@@ -21,4 +21,4 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     
     - name: test output
-      run: echo ${{steps.login-ecr.registry}}
+      run: echo ${{steps.login-ecr.outputs.registry}}
