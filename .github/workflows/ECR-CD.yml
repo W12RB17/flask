@@ -21,4 +21,11 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     
     - name: test output
-      run: echo ${{steps.login-ecr.outputs.registry}}
+      env:
+        registry: ${{steps.login-ecr.outputs.registry}}
+        repository: flask
+        tag: ${{ github.sha}}
+      run: |
+        docker build -t $registry/$repository:$tag .
+        docker images
+
